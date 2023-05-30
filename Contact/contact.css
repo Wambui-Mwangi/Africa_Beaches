@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: wheat;
+  }
+
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .form {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  textarea {
+    resize: vertical;
+    height: 120px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: wheat;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: blue;
+  }
+
+
+  .navigation{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: 0.5s;
+    border-radius: 60px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition-delay: 0.5s;
+  }
+  .navigation .toggleMenu{
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    background:rgb(0, 191, 255);
+    border-radius: 50%;
+    transition: 0.5s;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navigation.active.toggleMenu{
+    background: red;
+    transition-delay: 0.5s;
+    transform: translateY(60px);
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+  }
+  .navigation.toggleMenu::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    border-radius: 3px;
+    background: black;
+    transform: translateY(-5px);
+    transition: 0.5s;
+    transition-delay: 0.5s ;
+  }
+  .navigation.toggleMenu::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    border-radius: 3px;
+    background: black;
+    transform: translateY(-5px);
+    transition: 0.5s;
+    transition-delay: 0.5s;
+  }
+  .navigation.active.toggleMenu::before{
+    transition-delay: 0s;
+    background: whitesmoke;
+    transform: translateY(0px) rotate(45deg) scale(0.6);
+  }
+  .navigation.active.toggleMenu::after{
+    transition-delay: 0s;
+    background: whitesmoke;
+    transform: translateY(0px) rotate(315deg) scale(0.6);
+  }
+  .navigation.active{
+    width: 100%;
+  }
+  .navigation li {
+    list-style: none;
+    transition: 0.5s;
+    transform: scale(0);
+  }
+  .navigation.active li {
+    transition-delay:0.75s ;
+    display: flex;
+    transform: scale(1);
+  }
+  .navigation li a{
+    color: rgb(7, 7, 6);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
